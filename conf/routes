@@ -1,0 +1,72 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# https://www.playframework.com/documentation/latest/ScalaRouting
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                           controllers.HomeController.index()
+
+GET /books   controllers.BookController.getBooks
+GET /books/:id   controllers.BookController.getBook(id: Long)
+DELETE /books/:id   controllers.BookController.removeBook(id: Long)
+PUT /books/:id   controllers.BookController.updateBook(id: Long)
+POST /books   controllers.BookController.addBook
+
+GET /bookReviews   controllers.BookReviewController.getReviews
+GET /bookReviews/:id   controllers.BookReviewController.getReview(id: Long)
+DELETE /bookReviews/:id   controllers.BookReviewController.removeReview(id: Long)
+PUT /bookReviews/:id   controllers.BookReviewController.updateReview(id: Long)
+POST /bookReviews   controllers.BookReviewController.addReview
+
+GET /careers   controllers.CareersController.getCareers
+GET /careers/:id   controllers.CareersController.getCareer(id: Long)
+DELETE /careers/:id   controllers.CareersController.removeCareer(id: Long)
+PUT /careers/:id   controllers.CareersController.updateCareer(id: Long)
+POST /careers   controllers.CareersController.addCareer
+
+GET /cart   controllers.CartController.getCarts
+GET /cart/:id   controllers.CartController.getCart(id: Long)
+DELETE /cart/:id   controllers.CartController.removeCart(id: Long)
+POST /cart   controllers.CartController.addCart
+POST /cart/:id/book/:id   controllers.CartController.addToCart(id: Long)
+DELETE /cart/:id/book/:id   controllers.CartController.removeFromCart(id: Long)
+
+GET /category   controllers.CategoryController.getCategories()
+GET /category/:id   controllers.CategoryController.getCategory(id: Long)
+DELETE /category/:id   controllers.CategoryController.removeCategory(id: Long)
+PUT /category/:id   controllers.CategoryController.updateCategory(id: Long)
+POST /category   controllers.CategoryController.addCategory
+
+GET /discountCoupon   controllers.DiscountCouponController.getDiscountCoupons()
+GET /discountCoupon/:id   controllers.DiscountCouponController.getDiscountCoupon(id: Long)
+DELETE /discountCoupon/:id   controllers.DiscountCouponController.removeDiscountCoupon(id: Long)
+PUT /discountCoupon/:id   controllers.DiscountCouponController.updateDiscountCoupon(id: Long)
+POST /discountCoupon   controllers.DiscountCouponController.addDiscountCoupon()
+
+GET /giftCard   controllers.GiftCardController.getGiftCards()
+GET /giftCard/:id   controllers.GiftCardController.getGiftCard(id: Long)
+DELETE /giftCard/:id   controllers.GiftCardController.removeGiftCard(id: Long)
+PUT /giftCard/:id   controllers.GiftCardController.updateGiftCard(id: Long)
+POST /giftCard   controllers.GiftCardController.addGiftCard
+
+GET /order   controllers.OrderController.getOrders()
+GET /order/:id   controllers.OrderController.getOrder(id: Long)
+DELETE /order/:id   controllers.OrderController.removeOrder(id: Long)
+PUT /order/:id   controllers.OrderController.updateOrder(id: Long)
+POST /order   controllers.OrderController.addOrder
+
+GET /return   controllers.ReturnController.getReturns()
+GET /return/:id   controllers.ReturnController.getReturn(id: Long)
+DELETE /return/:id   controllers.ReturnController.removeReturn(id: Long)
+PUT /return/:id   controllers.ReturnController.updateReturn(id: Long)
+POST /return   controllers.ReturnController.addReturn
+
+GET /user   controllers.UserController.getUsers()
+GET /user/:id   controllers.UserController.getUser(id: Long)
+DELETE /user/:id   controllers.UserController.removeUser(id: Long)
+PUT /user/:id   controllers.UserController.updateUser(id: Long)
+POST /user   controllers.UserController.addUser
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
