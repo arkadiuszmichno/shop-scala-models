@@ -18,11 +18,11 @@ DELETE /bookReviews/:id   controllers.BookReviewController.removeReview(id: Long
 PUT /bookReviews/:id   controllers.BookReviewController.updateReview(id: Long)
 POST /bookReviews   controllers.BookReviewController.addReview
 
-GET /careers   controllers.CareersController.getCareers
-GET /careers/:id   controllers.CareersController.getCareer(id: Long)
-DELETE /careers/:id   controllers.CareersController.removeCareer(id: Long)
-PUT /careers/:id   controllers.CareersController.updateCareer(id: Long)
-POST /careers   controllers.CareersController.addCareer
+GET /careers   controllers.CareerController.getCareers
+GET /careers/:id   controllers.CareerController.getCareer(id: Long)
+DELETE /careers/:id   controllers.CareerController.removeCareer(id: Long)
+PUT /careers/:id   controllers.CareerController.updateCareer(id: Long)
+POST /careers   controllers.CareerController.addCareer
 
 GET /cart   controllers.CartController.getCarts
 GET /cart/:id   controllers.CartController.getCart(id: Long)
